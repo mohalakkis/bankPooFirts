@@ -9,19 +9,27 @@ public class Main {
 
         Account coo2 = new Account();
         coo2.accoutNumber = 1045.13;
-        coo2.balace = 9000;
+        coo2.balace = 000;
         coo2.accountOwner = "teste";
 
-        System.out.println(cco1.accoutNumber);
-        System.out.println(cco1.accountOwner);
-        System.out.println(cco1.balace);
+      try {
+          coo2.printBalance();
+        boolean deposito =   coo2.deposit(-10);
 
-        System.out.println(coo2.accoutNumber);
-        System.out.println(coo2.accountOwner);
-        System.out.println(coo2.balace);
+        if (!deposito) {
+            System.out.println("ach que deu errado!!!");
+            return;
+        }
+          coo2.printBalance();
+
+          coo2.saque(230);
+          coo2.printBalance();
+      }  catch (Exception e) {
+          System.out.println("Ocorreu um erro: " + e.getMessage());
+          e.printStackTrace();
+      }
 
 
-        coo2.printBalance();
 
     }
 }
