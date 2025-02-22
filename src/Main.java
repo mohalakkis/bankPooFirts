@@ -20,5 +20,8 @@ public class Main {
         System.out.println(coo2.accountOwner);
         System.out.println(coo2.balace);
 
+
+        coo2.printBalance();
+
     }
 }
